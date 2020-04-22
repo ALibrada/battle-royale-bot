@@ -52,7 +52,7 @@ typings/
 *.tgz
 
 # dotenv environment variable files
-.env*
+.env
 
 # Mac files
 .DS_Store
@@ -67,6 +67,7 @@ yarn-error.log
 
 #compiled
 dist
+public
 
 #data
 data.json

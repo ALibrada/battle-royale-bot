@@ -4,13 +4,19 @@
   "description": "Funny game to create battle royales with your coleagues for example",
   "main": "dist/index.js",
   "scripts": {
-    "compile": "tsc",
-    "run": "node dist/game.js"
+    "fs": "node dist/cli/filesystem",
+    "graphql": "node dist/cli/graphql",
+    "build": "npm run compile && mkdir -p public/game && node dist/client/render-pages && cp -r src/client/vendor public/",
+    "clean": "rm -rf public dist",
+    "compile": "tsc"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/node": "^13.13.2",
     "@types/random": "^2.1.1",
     "@types/seedrandom": "^2.4.28",
+    "@types/yargs": "^15.0.4",
+    "dotenv": "^8.2.0",
     "random": "^2.2.0",
     "typescript": "^3.8.3"
   },
@@ -28,5 +34,9 @@
   "bugs": {
     "url": "https://github.com/ALibrada/battle-royale-bot/issues"
   },
-  "homepage": "https://github.com/ALibrada/battle-royale-bot#readme"
+  "homepage": "https://github.com/ALibrada/battle-royale-bot#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "yargs": "^15.3.1"
+  }
 }
