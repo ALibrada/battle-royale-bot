@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "strict": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "outDir": "dist"
+  },
+  "include": ["*.ts"]
+}

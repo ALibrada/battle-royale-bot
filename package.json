@@ -1,0 +1,32 @@
+{
+  "name": "battle-royale-bot",
+  "version": "0.0.1",
+  "description": "Funny game to create battle royales with your coleagues for example",
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "tsc",
+    "run": "node dist/game.js"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.2",
+    "@types/random": "^2.1.1",
+    "@types/seedrandom": "^2.4.28",
+    "random": "^2.2.0",
+    "typescript": "^3.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALibrada/battle-royale-bot.git"
+  },
+  "keywords": [
+    "battle-royale",
+    "fun",
+    "game"
+  ],
+  "author": "Antonio Librada <antoniolibrada@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ALibrada/battle-royale-bot/issues"
+  },
+  "homepage": "https://github.com/ALibrada/battle-royale-bot#readme"
+}
