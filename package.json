@@ -1,16 +1,17 @@
 {
   "name": "battle-royale-bot",
   "version": "0.0.1",
-  "description": "Funny game to create battle royales with your coleagues for example",
+  "description": "Funny game to create battle royales with your colleagues, friends, darts team or whatever ",
   "main": "dist/index.js",
   "scripts": {
     "fs": "node dist/cli/filesystem",
     "graphql": "node dist/cli/graphql",
-    "build": "npm run compile && mkdir -p public/game && node dist/client/render-pages && cp -r src/client/vendor public/",
+    "build": "npm rum clean && npm run compile && mkdir -p public/game && node dist/client/render-pages",
     "clean": "rm -rf public dist",
     "compile": "tsc"
   },
   "devDependencies": {
+    "@sindresorhus/slugify": "^0.11.0",
     "@types/axios": "^0.14.0",
     "@types/node": "^13.13.2",
     "@types/random": "^2.1.1",

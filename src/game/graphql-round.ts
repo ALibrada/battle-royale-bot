@@ -6,7 +6,7 @@ import {DuelResult, Participant} from "../types";
 async function run(uuid: string): Promise<void> {
     const data = await getGame(uuid);
     const participants: Participant[] = data.alive.map(p => p.participant);
-    const game = new Game(data.seed, participants);
+    const game = new Game(data.seed, participants, data.game_fights.length);
     const duelResult: DuelResult = game.duel();
     await saveDuel({winner: duelResult.winner, loser: duelResult.loser, game: uuid});
 }

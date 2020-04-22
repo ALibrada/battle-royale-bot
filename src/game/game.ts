@@ -5,9 +5,12 @@ class Game {
     rng: any;
     participants: Participant[];
 
-    constructor(seed: string, participants: Participant[]) {
+    constructor(seed: string, participants: Participant[], roundNumber: number = 0) {
         this.rng = require("random");
         this.rng.use(seedrandom(seed));
+        for (let i = 0; i <= roundNumber; i++) {
+            this.rng.next();
+        }
         this.participants = participants;
     }
 

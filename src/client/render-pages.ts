@@ -1,5 +1,6 @@
 import {writeFileSync} from "fs";
 import {join} from "path";
+import slugify from "@sindresorhus/slugify";
 
 import gamePage from "./pages/game";
 import getGames from "../data/get-games";
@@ -12,7 +13,7 @@ async function main(): Promise<void> {
     const games = await getGames();
     games.forEach(async game => {
         const html = await gamePage(game.uuid);
-        renderPage(html, join('game', `${game.uuid}.html`));
+        renderPage(html, join('game', `${slugify(game.name)}.html`));
     })
 }
 main();
