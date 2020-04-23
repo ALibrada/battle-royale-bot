@@ -64,16 +64,16 @@ function gamePage(uuid: string): Promise<string> {
             <div class="container">
                 <h1>${game.name}</h1>
                 <div class="row">
-                    <h3>Fights</h3>
+                    <h3>Duels</h3>
                     ${fightsTable(fights)}
                 </div>
                 <div class="row">
                     <div class="six columns">
-                        <h4>Alive</h4>
+                        <h4>Still in</h4>
                         ${participantsTable(alive)}
                     </div>
                     <div class="six columns">
-                        <h4>Dead</h4>
+                        <h4>Out</h4>
                         ${participantsTable(dead)}
                     </div>
                  </div>
