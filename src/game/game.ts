@@ -31,7 +31,6 @@ class Game {
         while (index1 === index2) {
             index2 = this.getRandomParticipant()
         }
-        console.debug(`${this.participants[index1].name} will fight against ${this.participants[index2].name}`);
         return [this.participants[index1], this.participants[index2]];
     }
 
@@ -39,10 +38,8 @@ class Game {
         const participants = this.getSelectedParticipants();
         const winnerIndex: number = this.getRandomNumber(0, 1);
         if (winnerIndex === 1) {
-            console.debug(`${participants[1].name} has defeated ${participants[0].name}`);
             return {winner: participants[1], loser: participants[0]}
         } else {
-            console.debug(`${participants[0].name} has defeated ${participants[1].name}`);
             return {winner: participants[0], loser: participants[1]}
         }
     }
