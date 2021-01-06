@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/ALibrada/battle-royale-bot#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "yargs": "^15.3.1"
   }
 }
